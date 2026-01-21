@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        /* Baris ini memancing Extension agar aktif */
+         @theme { }
+     </style>
+</head>
+
+<body>
+    <header>
+        <nav
+            class="block w-full px-4 py-2 mx-auto bg-white bg-opacity-90 sticky top-3 shadow lg:px-8 lg:py-3 backdrop-blur-lg backdrop-saturate-150 border-gray-100 z-[9999]">
+            <div class="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
+                <a href="../../index.html"
+                    class="mr-4 block cursor-pointer py-1.5 text-3xl text-slate-800 font-semibold hover:text-blue-500 transition transform-30">
+                    NaviBay
+                </a>
+                <div class="hidden lg:block">
+                    <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+                        <li class="flex items-center p-1 text-s gap-x-2 text-slate-600">
+                            <a href="product.html" class="flex items-center text-blue-500">Product</a>
+                        </li>
+
+                        <li class="flex items-center p-1 text-s gap-x-2 text-slate-600">
+                            <a href="#" class="flex items-center">Category</a>
+                        </li>
+
+                        <li class="flex items-center p-1 text-s gap-x-2 text-slate-600">
+                            <a href="./cart.html" class="flex items-center"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+
+                        <li class="flex items-center p-1 text-m gap-x-2 text-slate-600">
+                            <a class="inline-block px-10 py-2 font-medium text-white bg-blue-500 border border-blue-500 rounded-sm text-s hover:bg-transparent hover:text-blue-500"
+                                href="#">
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button
+                    class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
+                    type="button">
+                    <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- product header -->
+        <div class="bg-white">
+            <div class="pt-6">
+                <nav aria-label="Breadcrumb">
+                    <ol role="list"
+                        class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <li>
+                            <div class="flex items-center">
+                                <a href="#" class="mr-2 text-sm font-medium text-gray-900">Men</a>
+                                <svg viewBox="0 0 16 20" width="16" height="20" fill="currentColor" aria-hidden="true"
+                                    class="h-5 w-4 text-gray-300">
+                                    <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+                                </svg>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <a href="#" class="mr-2 text-sm font-medium text-gray-900">Clothing</a>
+                                <svg viewBox="0 0 16 20" width="16" height="20" fill="currentColor" aria-hidden="true"
+                                    class="h-5 w-4 text-gray-300">
+                                    <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+                                </svg>
+                            </div>
+                        </li>
+
+                        <li class="text-sm">
+                            <a href="#" aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">Basic
+                                Tee 6-Pack</a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- Image gallery -->
+                <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
+                        alt="Two each of gray, white, and black shirts laying flat."
+                        class="row-span-2 aspect-3/4 size-full rounded-lg object-cover max-lg:hidden" />
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg"
+                        alt="Model wearing plain black basic tee."
+                        class="col-start-2 aspect-3/2 size-full rounded-lg object-cover max-lg:hidden" />
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg"
+                        alt="Model wearing plain gray basic tee."
+                        class="col-start-2 row-start-2 aspect-3/2 size-full rounded-lg object-cover max-lg:hidden" />
+                    <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-02-featured-product-shot.jpg"
+                        alt="Model wearing plain white basic tee."
+                        class="row-span-2 aspect-4/5 size-full object-cover sm:rounded-lg lg:aspect-3/4" />
+                </div>
+
+                <!-- Product info -->
+                <div
+                    class="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
+                    <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+                        <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Basic Tee 6-Pack</h1>
+                    </div>
+
+                    <!-- Options -->
+                    <div class="mt-4 lg:row-span-3 lg:mt-0">
+                        <h2 class="sr-only">Product information</h2>
+                        <p class="text-3xl tracking-tight text-gray-900">$192</p>
+
+                        <!-- Reviews -->
+                        <div class="mt-6">
+                            <h3 class="sr-only">Reviews</h3>
+                            <div class="flex items-center">
+                                <div class="flex items-center">
+                                    <!-- Active: "text-gray-900", Default: "text-gray-200" -->
+                                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                        class="size-5 shrink-0 text-gray-900">
+                                        <path
+                                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                            clip-rule="evenodd" fill-rule="evenodd" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                        class="size-5 shrink-0 text-gray-900">
+                                        <path
+                                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                            clip-rule="evenodd" fill-rule="evenodd" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                        class="size-5 shrink-0 text-gray-900">
+                                        <path
+                                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                            clip-rule="evenodd" fill-rule="evenodd" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                        class="size-5 shrink-0 text-gray-900">
+                                        <path
+                                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                            clip-rule="evenodd" fill-rule="evenodd" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                        class="size-5 shrink-0 text-gray-200">
+                                        <path
+                                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                            clip-rule="evenodd" fill-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="sr-only">4 out of 5 stars</p>
+                                <a href="#" class="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">117
+                                    reviews</a>
+                            </div>
+                        </div>
+
+                        <form class="mt-10">
+                            <!-- Colors -->
+                            <div>
+                                <h3 class="text-sm font-medium text-gray-900">Color</h3>
+
+                                <fieldset aria-label="Choose a color" class="mt-4">
+                                    <div class="flex items-center gap-x-3">
+                                        <div class="flex rounded-full outline -outline-offset-1 outline-black/10">
+                                            <input type="radio" name="color" value="white" checked aria-label="White"
+                                                class="size-8 appearance-none rounded-full bg-white forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-400 focus-visible:outline-3 focus-visible:outline-offset-3" />
+                                        </div>
+                                        <div class="flex rounded-full outline -outline-offset-1 outline-black/10">
+                                            <input type="radio" name="color" value="gray" aria-label="Gray"
+                                                class="size-8 appearance-none rounded-full bg-gray-200 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-400 focus-visible:outline-3 focus-visible:outline-offset-3" />
+                                        </div>
+                                        <div class="flex rounded-full outline -outline-offset-1 outline-black/10">
+                                            <input type="radio" name="color" value="black" aria-label="Black"
+                                                class="size-8 appearance-none rounded-full bg-gray-900 forced-color-adjust-none checked:outline-2 checked:outline-offset-2 checked:outline-gray-900 focus-visible:outline-3 focus-visible:outline-offset-3" />
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <!-- Sizes -->
+                            <div class="mt-10">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-sm font-medium text-gray-900">Size</h3>
+                                    <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">Size
+                                        guide</a>
+                                </div>
+
+                                <fieldset aria-label="Choose a size" class="mt-4">
+                                    <div class="grid grid-cols-4 gap-3">
+                                        <label aria-label="XXS"
+                                            class="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25">
+                                            <input type="radio" name="size" disabled
+                                                class="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed" />
+                                            <span
+                                                class="text-sm font-medium text-gray-900 uppercase group-has-checked:text-white">XXS</span>
+                                        </label>
+                                        <label aria-label="XS"
+                                            class="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25">
+                                            <input type="radio" name="size"
+                                                class="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed" />
+                                            <span
+                                                class="text-sm font-medium text-gray-900 uppercase group-has-checked:text-white">XS</span>
+                                        </label>
+                                        <label aria-label="S"
+                                            class="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25">
+                                            <input type="radio" name="size" checked
+                                                class="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed" />
+                                            <span
+                                                class="text-sm font-medium text-gray-900 uppercase group-has-checked:text-white">S</span>
+                                        </label>
+                                        <label aria-label="M"
+                                            class="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25">
+                                            <input type="radio" name="size"
+                                                class="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed" />
+                                            <span
+                                                class="text-sm font-medium text-gray-900 uppercase group-has-checked:text-white">M</span>
+                                        </label>
+                                        <label aria-label="L"
+                                            class="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25">
+                                            <input type="radio" name="size"
+                                                class="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed" />
+                                            <span
+                                                class="text-sm font-medium text-gray-900 uppercase group-has-checked:text-white">L</span>
+                                        </label>
+                                        <label aria-label="XL"
+                                            class="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25">
+                                            <input type="radio" name="size"
+                                                class="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed" />
+                                            <span
+                                                class="text-sm font-medium text-gray-900 uppercase group-has-checked:text-white">XL</span>
+                                        </label>
+                                        <label aria-label="2XL"
+                                            class="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25">
+                                            <input type="radio" name="size"
+                                                class="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed" />
+                                            <span
+                                                class="text-sm font-medium text-gray-900 uppercase group-has-checked:text-white">2XL</span>
+                                        </label>
+                                        <label aria-label="3XL"
+                                            class="group relative flex items-center justify-center rounded-md border border-gray-300 bg-white p-3 has-checked:border-indigo-600 has-checked:bg-indigo-600 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 has-disabled:border-gray-400 has-disabled:bg-gray-200 has-disabled:opacity-25">
+                                            <input type="radio" name="size"
+                                                class="absolute inset-0 appearance-none focus:outline-none disabled:cursor-not-allowed" />
+                                            <span
+                                                class="text-sm font-medium text-gray-900 uppercase group-has-checked:text-white">3XL</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <button type="submit"
+                                class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden">Add
+                                to bag</button>
+                        </form>
+                    </div>
+
+                    <div
+                        class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pr-8 lg:pb-16">
+                        <!-- Description and details -->
+                        <div>
+                            <h3 class="sr-only">Description</h3>
+
+                            <div class="space-y-6">
+                                <p class="text-base text-gray-900">The Basic Tee 6-Pack allows you to fully express your
+                                    vibrant personality with three grayscale options. Feeling adventurous? Put on a
+                                    heather gray tee. Want to be a trendsetter? Try our exclusive colorway:
+                                    &quot;Black&quot;. Need to add an extra pop of color to your outfit? Our white tee
+                                    has you covered.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
+
+                            <div class="mt-4">
+                                <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+                                    <li class="text-gray-400"><span class="text-gray-600">Hand cut and sewn
+                                            locally</span></li>
+                                    <li class="text-gray-400"><span class="text-gray-600">Dyed with our proprietary
+                                            colors</span></li>
+                                    <li class="text-gray-400"><span class="text-gray-600">Pre-washed &amp;
+                                            pre-shrunk</span></li>
+                                    <li class="text-gray-400"><span class="text-gray-600">Ultra-soft 100% cotton</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h2 class="text-sm font-medium text-gray-900">Details</h2>
+
+                            <div class="mt-4 space-y-6">
+                                <p class="text-sm text-gray-600">The 6-Pack includes two black, two white, and two
+                                    heather gray Basic Tees. Sign up for our subscription service and be the first to
+                                    get new, exciting colors, like our upcoming &quot;Charcoal Gray&quot; limited
+                                    release.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end product header -->
+
+        <!-- filter -->
+        <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+        <div class="bg-white">
+            <!-- Mobile filter dialog -->
+            <el-dialog>
+                <dialog id="mobile-filters" class="overflow-hidden backdrop:bg-transparent lg:hidden">
+                    <el-dialog-backdrop
+                        class="fixed inset-0 bg-black/25 transition-opacity duration-300 ease-linear data-closed:opacity-0"></el-dialog-backdrop>
+
+                    <div tabindex="0" class="fixed inset-0 flex focus:outline-none">
+                        <el-dialog-panel
+                            class="relative ml-auto flex size-full max-w-xs transform flex-col overflow-y-auto bg-white pt-4 pb-6 shadow-xl transition duration-300 ease-in-out data-closed:translate-x-full">
+                            <div class="flex items-center justify-between px-4">
+                                <h2 class="text-lg font-medium text-gray-900">Filters</h2>
+                                <button type="button" command="close" commandfor="mobile-filters"
+                                    class="relative -mr-2 flex size-10 items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:outline-hidden">
+                                    <span class="absolute -inset-0.5"></span>
+                                    <span class="sr-only">Close menu</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        data-slot="icon" aria-hidden="true" class="size-6">
+                                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Filters -->
+                            <form class="mt-4 border-t border-gray-200">
+                                <h3 class="sr-only">Categories</h3>
+                                <ul role="list" class="px-2 py-3 font-medium text-gray-900">
+                                    <li>
+                                        <a href="#" class="block px-2 py-3">Totes</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-2 py-3">Backpacks</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-2 py-3">Travel Bags</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-2 py-3">Hip Bags</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="block px-2 py-3">Laptop Sleeves</a>
+                                    </li>
+                                </ul>
+
+                                <div class="border-t border-gray-200 px-4 py-6">
+                                    <h3 class="-mx-2 -my-3 flow-root">
+                                        <button type="button" command="--toggle"
+                                            commandfor="filter-section-mobile-color"
+                                            class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
+                                            <span class="font-medium text-gray-900">Color</span>
+                                            <span class="ml-6 flex items-center">
+                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                    aria-hidden="true" class="size-5 in-aria-expanded:hidden">
+                                                    <path
+                                                        d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                                                </svg>
+                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                    aria-hidden="true" class="size-5 not-in-aria-expanded:hidden">
+                                                    <path
+                                                        d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                                                        clip-rule="evenodd" fill-rule="evenodd" />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </h3>
+                                    <el-disclosure id="filter-section-mobile-color" hidden class="block pt-6">
+                                        <div class="space-y-6">
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-color-0" type="checkbox" name="color[]"
+                                                            value="white"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-color-0"
+                                                    class="min-w-0 flex-1 text-gray-500">White</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-color-1" type="checkbox" name="color[]"
+                                                            value="beige"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-color-1"
+                                                    class="min-w-0 flex-1 text-gray-500">Beige</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-color-2" type="checkbox" name="color[]"
+                                                            value="blue"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-color-2"
+                                                    class="min-w-0 flex-1 text-gray-500">Blue</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-color-3" type="checkbox" name="color[]"
+                                                            value="brown"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-color-3"
+                                                    class="min-w-0 flex-1 text-gray-500">Brown</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-color-4" type="checkbox" name="color[]"
+                                                            value="green"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-color-4"
+                                                    class="min-w-0 flex-1 text-gray-500">Green</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-color-5" type="checkbox" name="color[]"
+                                                            value="purple"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-color-5"
+                                                    class="min-w-0 flex-1 text-gray-500">Purple</label>
+                                            </div>
+                                        </div>
+                                    </el-disclosure>
+                                </div>
+                                <div class="border-t border-gray-200 px-4 py-6">
+                                    <h3 class="-mx-2 -my-3 flow-root">
+                                        <button type="button" command="--toggle"
+                                            commandfor="filter-section-mobile-category"
+                                            class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
+                                            <span class="font-medium text-gray-900">Category</span>
+                                            <span class="ml-6 flex items-center">
+                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                    aria-hidden="true" class="size-5 in-aria-expanded:hidden">
+                                                    <path
+                                                        d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                                                </svg>
+                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                    aria-hidden="true" class="size-5 not-in-aria-expanded:hidden">
+                                                    <path
+                                                        d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                                                        clip-rule="evenodd" fill-rule="evenodd" />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </h3>
+                                    <el-disclosure id="filter-section-mobile-category" hidden class="block pt-6">
+                                        <div class="space-y-6">
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-category-0" type="checkbox"
+                                                            name="category[]" value="new-arrivals"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-category-0"
+                                                    class="min-w-0 flex-1 text-gray-500">New Arrivals</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-category-1" type="checkbox"
+                                                            name="category[]" value="sale"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-category-1"
+                                                    class="min-w-0 flex-1 text-gray-500">Sale</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-category-2" type="checkbox"
+                                                            name="category[]" value="travel"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-category-2"
+                                                    class="min-w-0 flex-1 text-gray-500">Travel</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-category-3" type="checkbox"
+                                                            name="category[]" value="organization"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-category-3"
+                                                    class="min-w-0 flex-1 text-gray-500">Organization</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-category-4" type="checkbox"
+                                                            name="category[]" value="accessories"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-category-4"
+                                                    class="min-w-0 flex-1 text-gray-500">Accessories</label>
+                                            </div>
+                                        </div>
+                                    </el-disclosure>
+                                </div>
+                                <div class="border-t border-gray-200 px-4 py-6">
+                                    <h3 class="-mx-2 -my-3 flow-root">
+                                        <button type="button" command="--toggle" commandfor="filter-section-mobile-size"
+                                            class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
+                                            <span class="font-medium text-gray-900">Size</span>
+                                            <span class="ml-6 flex items-center">
+                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                    aria-hidden="true" class="size-5 in-aria-expanded:hidden">
+                                                    <path
+                                                        d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                                                </svg>
+                                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                    aria-hidden="true" class="size-5 not-in-aria-expanded:hidden">
+                                                    <path
+                                                        d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                                                        clip-rule="evenodd" fill-rule="evenodd" />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </h3>
+                                    <el-disclosure id="filter-section-mobile-size" hidden class="block pt-6">
+                                        <div class="space-y-6">
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-size-0" type="checkbox" name="size[]"
+                                                            value="2l"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-size-0"
+                                                    class="min-w-0 flex-1 text-gray-500">2L</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-size-1" type="checkbox" name="size[]"
+                                                            value="6l"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-size-1"
+                                                    class="min-w-0 flex-1 text-gray-500">6L</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-size-2" type="checkbox" name="size[]"
+                                                            value="12l"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-size-2"
+                                                    class="min-w-0 flex-1 text-gray-500">12L</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-size-3" type="checkbox" name="size[]"
+                                                            value="18l"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-size-3"
+                                                    class="min-w-0 flex-1 text-gray-500">18L</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-size-4" type="checkbox" name="size[]"
+                                                            value="20l"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-size-4"
+                                                    class="min-w-0 flex-1 text-gray-500">20L</label>
+                                            </div>
+                                            <div class="flex gap-3">
+                                                <div class="flex h-5 shrink-0 items-center">
+                                                    <div class="group grid size-4 grid-cols-1">
+                                                        <input id="filter-mobile-size-5" type="checkbox" name="size[]"
+                                                            value="40l"
+                                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                        <svg viewBox="0 0 14 14" fill="none"
+                                                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                            <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="opacity-0 group-has-checked:opacity-100" />
+                                                            <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <label for="filter-mobile-size-5"
+                                                    class="min-w-0 flex-1 text-gray-500">40L</label>
+                                            </div>
+                                        </div>
+                                    </el-disclosure>
+                                </div>
+                            </form>
+                        </el-dialog-panel>
+                    </div>
+                </dialog>
+            </el-dialog>
+
+            <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-900">New Arrivals</h1>
+
+                    <div class="flex items-center">
+                        <el-dropdown class="relative inline-block text-left">
+                            <button
+                                class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
+                                Sort
+                                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                    class="-mr-1 ml-1 size-5 shrink-0 text-gray-400 group-hover:text-gray-500">
+                                    <path
+                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd" fill-rule="evenodd" />
+                                </svg>
+                            </button>
+
+                            <el-menu anchor="bottom end" popover
+                                class="w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+                                <div class="py-1">
+                                    <!-- Selected: "font-medium text-gray-900", Not Selected: "text-gray-500" -->
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm font-medium text-gray-900 focus:bg-gray-100 focus:outline-hidden">Most
+                                        Popular</a>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-500 focus:bg-gray-100 focus:outline-hidden">Best
+                                        Rating</a>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-500 focus:bg-gray-100 focus:outline-hidden">Newest</a>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-500 focus:bg-gray-100 focus:outline-hidden">Price:
+                                        Low to High</a>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-500 focus:bg-gray-100 focus:outline-hidden">Price:
+                                        High to Low</a>
+                                </div>
+                            </el-menu>
+                        </el-dropdown>
+
+                        <button type="button" class="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7">
+                            <span class="sr-only">View grid</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                class="size-5">
+                                <path
+                                    d="M4.25 2A2.25 2.25 0 0 0 2 4.25v2.5A2.25 2.25 0 0 0 4.25 9h2.5A2.25 2.25 0 0 0 9 6.75v-2.5A2.25 2.25 0 0 0 6.75 2h-2.5Zm0 9A2.25 2.25 0 0 0 2 13.25v2.5A2.25 2.25 0 0 0 4.25 18h2.5A2.25 2.25 0 0 0 9 15.75v-2.5A2.25 2.25 0 0 0 6.75 11h-2.5Zm9-9A2.25 2.25 0 0 0 11 4.25v2.5A2.25 2.25 0 0 0 13.25 9h2.5A2.25 2.25 0 0 0 18 6.75v-2.5A2.25 2.25 0 0 0 15.75 2h-2.5Zm0 9A2.25 2.25 0 0 0 11 13.25v2.5A2.25 2.25 0 0 0 13.25 18h2.5A2.25 2.25 0 0 0 18 15.75v-2.5A2.25 2.25 0 0 0 15.75 11h-2.5Z"
+                                    clip-rule="evenodd" fill-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <button type="button" command="show-modal" commandfor="mobile-filters"
+                            class="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden">
+                            <span class="sr-only">Filters</span>
+                            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                                class="size-5">
+                                <path
+                                    d="M2.628 1.601C5.028 1.206 7.49 1 10 1s4.973.206 7.372.601a.75.75 0 0 1 .628.74v2.288a2.25 2.25 0 0 1-.659 1.59l-4.682 4.683a2.25 2.25 0 0 0-.659 1.59v3.037c0 .684-.31 1.33-.844 1.757l-1.937 1.55A.75.75 0 0 1 8 18.25v-5.757a2.25 2.25 0 0 0-.659-1.591L2.659 6.22A2.25 2.25 0 0 1 2 4.629V2.34a.75.75 0 0 1 .628-.74Z"
+                                    clip-rule="evenodd" fill-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <section aria-labelledby="products-heading" class="pt-6 pb-24">
+                    <h2 id="products-heading" class="sr-only">Products</h2>
+
+                    <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+                        <!-- Filters -->
+                        <form class="hidden lg:block">
+                            <h3 class="sr-only">Categories</h3>
+                            <ul role="list"
+                                class="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
+                                <li>
+                                    <a href="#">Totes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Backpacks</a>
+                                </li>
+                                <li>
+                                    <a href="#">Travel Bags</a>
+                                </li>
+                                <li>
+                                    <a href="#">Hip Bags</a>
+                                </li>
+                                <li>
+                                    <a href="#">Laptop Sleeves</a>
+                                </li>
+                            </ul>
+
+                            <div class="border-b border-gray-200 py-6">
+                                <h3 class="-my-3 flow-root">
+                                    <button type="button" command="--toggle" commandfor="filter-section-color"
+                                        class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                                        <span class="font-medium text-gray-900">Color</span>
+                                        <span class="ml-6 flex items-center">
+                                            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                aria-hidden="true" class="size-5 in-aria-expanded:hidden">
+                                                <path
+                                                    d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                                            </svg>
+                                            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                aria-hidden="true" class="size-5 not-in-aria-expanded:hidden">
+                                                <path
+                                                    d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                                                    clip-rule="evenodd" fill-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </h3>
+                                <el-disclosure id="filter-section-color" hidden class="block pt-6">
+                                    <div class="space-y-4">
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-color-0" type="checkbox" name="color[]"
+                                                        value="white"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-color-0" class="text-sm text-gray-600">White</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-color-1" type="checkbox" name="color[]"
+                                                        value="beige"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-color-1" class="text-sm text-gray-600">Beige</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-color-2" type="checkbox" name="color[]"
+                                                        value="blue" checked
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-color-2" class="text-sm text-gray-600">Blue</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-color-3" type="checkbox" name="color[]"
+                                                        value="brown"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-color-3" class="text-sm text-gray-600">Brown</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-color-4" type="checkbox" name="color[]"
+                                                        value="green"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-color-4" class="text-sm text-gray-600">Green</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-color-5" type="checkbox" name="color[]"
+                                                        value="purple"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-color-5" class="text-sm text-gray-600">Purple</label>
+                                        </div>
+                                    </div>
+                                </el-disclosure>
+                            </div>
+                            <div class="border-b border-gray-200 py-6">
+                                <h3 class="-my-3 flow-root">
+                                    <button type="button" command="--toggle" commandfor="filter-section-category"
+                                        class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                                        <span class="font-medium text-gray-900">Category</span>
+                                        <span class="ml-6 flex items-center">
+                                            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                aria-hidden="true" class="size-5 in-aria-expanded:hidden">
+                                                <path
+                                                    d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                                            </svg>
+                                            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                aria-hidden="true" class="size-5 not-in-aria-expanded:hidden">
+                                                <path
+                                                    d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                                                    clip-rule="evenodd" fill-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </h3>
+                                <el-disclosure id="filter-section-category" hidden class="block pt-6">
+                                    <div class="space-y-4">
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-category-0" type="checkbox" name="category[]"
+                                                        value="new-arrivals"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-category-0" class="text-sm text-gray-600">New
+                                                Arrivals</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-category-1" type="checkbox" name="category[]"
+                                                        value="sale"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-category-1" class="text-sm text-gray-600">Sale</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-category-2" type="checkbox" name="category[]"
+                                                        value="travel" checked
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-category-2" class="text-sm text-gray-600">Travel</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-category-3" type="checkbox" name="category[]"
+                                                        value="organization"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-category-3"
+                                                class="text-sm text-gray-600">Organization</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-category-4" type="checkbox" name="category[]"
+                                                        value="accessories"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-category-4"
+                                                class="text-sm text-gray-600">Accessories</label>
+                                        </div>
+                                    </div>
+                                </el-disclosure>
+                            </div>
+                            <div class="border-b border-gray-200 py-6">
+                                <h3 class="-my-3 flow-root">
+                                    <button type="button" command="--toggle" commandfor="filter-section-size"
+                                        class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                                        <span class="font-medium text-gray-900">Size</span>
+                                        <span class="ml-6 flex items-center">
+                                            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                aria-hidden="true" class="size-5 in-aria-expanded:hidden">
+                                                <path
+                                                    d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                                            </svg>
+                                            <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon"
+                                                aria-hidden="true" class="size-5 not-in-aria-expanded:hidden">
+                                                <path
+                                                    d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                                                    clip-rule="evenodd" fill-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </h3>
+                                <el-disclosure id="filter-section-size" hidden class="block pt-6">
+                                    <div class="space-y-4">
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-size-0" type="checkbox" name="size[]" value="2l"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-size-0" class="text-sm text-gray-600">2L</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-size-1" type="checkbox" name="size[]" value="6l"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-size-1" class="text-sm text-gray-600">6L</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-size-2" type="checkbox" name="size[]" value="12l"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-size-2" class="text-sm text-gray-600">12L</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-size-3" type="checkbox" name="size[]" value="18l"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-size-3" class="text-sm text-gray-600">18L</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-size-4" type="checkbox" name="size[]" value="20l"
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-size-4" class="text-sm text-gray-600">20L</label>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <div class="flex h-5 shrink-0 items-center">
+                                                <div class="group grid size-4 grid-cols-1">
+                                                    <input id="filter-size-5" type="checkbox" name="size[]" value="40l"
+                                                        checked
+                                                        class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto" />
+                                                    <svg viewBox="0 0 14 14" fill="none"
+                                                        class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25">
+                                                        <path d="M3 8L6 11L11 3.5" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"
+                                                            class="opacity-0 group-has-checked:opacity-100" />
+                                                        <path d="M3 7H11" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="opacity-0 group-has-indeterminate:opacity-100" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <label for="filter-size-5" class="text-sm text-gray-600">40L</label>
+                                        </div>
+                                    </div>
+                                </el-disclosure>
+                            </div>
+                        </form>
+
+                        <!-- Product grid -->
+                        <div class="lg:col-span-3">
+                            <!-- Your content -->
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- end filter -->
+
+        <!-- product list -->
+        <section>
+            <div class="block w-[1600px] mx-auto px-4 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+                <header class="flex justify-between">
+                    <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Like That Product</h2>
+                    <a href="">See All <i class="fa-solid fa-arrow-right"></i></a>
+                </header>
+
+                <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                    <li>
+                        <a href="#" class="group block overflow-hidden border rounded-lg p-3">
+                            <img src="fawaz.jpeg" alt=""
+                                class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-102 sm:h-[450px]">
+
+                            <div class="relative pt-3">
+                                <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                                    Basic Tee
+                                </h3>
+
+                                <p class="mt-2">
+                                    <span class="sr-only"> Regular Price </span>
+
+                                    <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="group block overflow-hidden border rounded-lg p-3">
+                            <img src="fawaz.jpeg" alt=""
+                                class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-102 sm:h-[450px]">
+
+                            <div class="relative pt-3">
+                                <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                                    Basic Tee
+                                </h3>
+
+                                <p class="mt-2">
+                                    <span class="sr-only"> Regular Price </span>
+
+                                    <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="group block overflow-hidden border rounded-lg p-3">
+                            <img src="fawaz.jpeg" alt=""
+                                class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-102 sm:h-[450px]">
+
+                            <div class="relative pt-3">
+                                <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                                    Basic Tee
+                                </h3>
+
+                                <p class="mt-2">
+                                    <span class="sr-only"> Regular Price </span>
+
+                                    <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="group block overflow-hidden border rounded-lg p-3">
+                            <img src="fawaz.jpeg" alt=""
+                                class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-102 sm:h-[450px]">
+
+                            <div class="relative pt-3">
+                                <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                                    Basic Tee
+                                </h3>
+
+                                <p class="mt-2">
+                                    <span class="sr-only"> Regular Price </span>
+
+                                    <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="group block overflow-hidden border rounded-lg p-3">
+                            <img src="fawaz.jpeg" alt=""
+                                class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-102 sm:h-[450px]">
+
+                            <div class="relative pt-3">
+                                <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                                    Basic Tee
+                                </h3>
+
+                                <p class="mt-2">
+                                    <span class="sr-only"> Regular Price </span>
+
+                                    <span class="tracking-wider text-gray-900"> £24.00 GBP </span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- end product list -->
+
+        <!-- pagination -->
+        <ul class="flex justify-center gap-3 text-gray-90 py-3">
+            <li>
+                <a href="#"
+                    class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180"
+                    aria-label="Previous page">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </li>
+
+            <li class="text-sm/8 font-medium tracking-widest">2/12</li>
+
+            <li>
+                <a href="#"
+                    class="grid size-8 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180"
+                    aria-label="Next page">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <!-- end pagination -->
+
+        <!-- cta -->
+        <div class="bg-white">
+            <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+                <div
+                    class="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+                    <svg viewBox="0 0 1024 1024" aria-hidden="true"
+                        class="absolute top-1/2 left-1/2 -z-10 size-256 -translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0">
+                        <circle r="512" cx="512" cy="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                            fill-opacity="0.7" />
+                        <defs>
+                            <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                                <stop stop-color="#7775D6" />
+                                <stop offset="1" stop-color="#E935C1" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                    <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+                        <h2 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Boost your
+                            productivity. Start using our app today.</h2>
+                        <p class="mt-6 text-lg/8 text-pretty text-gray-300">Ac euismod vel sit maecenas id pellentesque
+                            eu sed consectetur. Malesuada adipiscing sagittis vel nulla.</p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                            <a href="#"
+                                class="rounded-md bg-gray-700 px-3.5 py-2.5 text-sm font-semibold text-white inset-ring inset-ring-white/5 hover:bg-gray-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                                Get started </a>
+                            <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-100">
+                                Learn more
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative mt-16 h-80 lg:mt-8">
+                        <img width="1824" height="1080"
+                            src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
+                            alt="App screenshot"
+                            class="absolute top-0 left-0 w-228 max-w-none rounded-md bg-white/5 ring-1 ring-white/10" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end cta -->
+    </main>
+
+    <footer class="bg-white border-t">
+        <div class="px-4 pt-16 pb-6 mx-auto w-[1700px] sm:px-6 lg:px-8 lg:pt-24">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <div>
+                    <div class="flex justify-center text-blue-500 sm:justify-start">
+                        <h1 class="text-5xl font-semibold">NaviBay</h1>
+                    </div>
+
+                    <p class="max-w-md mt-6 leading-relaxed text-center text-gray-500 sm:max-w-xs sm:text-left">
+                        Your trusted online shopping destination for everything you need.
+                    </p>
+
+                    <ul class="flex justify-center gap-6 mt-8 sm:justify-start md:gap-8">
+                        <li>
+                            <a href="#" rel="noreferrer" target="_blank"
+                                class="text-blue-500 transition hover:text-blue-500/75">
+                                <span class="sr-only">Facebook</span>
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" rel="noreferrer" target="_blank"
+                                class="text-blue-500 transition hover:text-blue-500/75">
+                                <span class="sr-only">Instagram</span>
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" rel="noreferrer" target="_blank"
+                                class="text-blue-500 transition hover:text-blue-500/75">
+                                <span class="sr-only">Twitter</span>
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" rel="noreferrer" target="_blank"
+                                class="text-blue-500 transition hover:text-blue-500/75">
+                                <span class="sr-only">GitHub</span>
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" rel="noreferrer" target="_blank"
+                                class="text-blue-600 transition hover:text-blue-600/75">
+                                <span class="sr-only">Dribbble</span>
+                                <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
+                    <div class="text-center sm:text-left">
+                        <p class="text-lg font-medium text-gray-900">About Us</p>
+
+                        <ul class="mt-8 space-y-4 text-sm">
+                            <li>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                    Company History
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                    Meet the Team
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                    Employee Handbook
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Careers </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center sm:text-left">
+                        <p class="text-lg font-medium text-gray-900">Our Services</p>
+
+                        <ul class="mt-8 space-y-4 text-sm">
+                            <li>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                    Web Development
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                    Web Design
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                    Marketing
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                                    Google Ads
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center sm:text-left">
+                        <p class="text-lg font-medium text-gray-900">Helpful Links</p>
+
+                        <ul class="mt-8 space-y-4 text-sm">
+                            <li>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> FAQs </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-700 transition hover:text-gray-700/75" href="#"> Support </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center sm:text-left">
+                        <p class="text-lg font-medium text-gray-900">Contact Us</p>
+
+                        <ul class="mt-8 space-y-4 text-sm">
+                            <li>
+                                <a class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                                    href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-900 size-5 shrink-0"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+
+                                    <span class="text-gray-700">john@doe.com</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                                    href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-900 size-5 shrink-0"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                        </path>
+                                    </svg>
+
+                                    <span class="text-gray-700">0123456789</span>
+                                </a>
+                            </li>
+
+                            <li class="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-900 size-5 shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+
+                                <address class="-mt-0.5 text-gray-700 not-italic">
+                                    213 Lane, London, United Kingdom
+                                </address>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 mt-12 border-t border-gray-100">
+                <div class="text-center sm:flex sm:justify-between sm:text-left">
+                    <p class="text-sm text-gray-500">
+                        <span class="block sm:inline">All rights reserved.</span>
+
+                        <a class="inline-block text-teal-600 underline transition hover:text-teal-600/75" href="#">
+                            Terms &amp; Conditions
+                        </a>
+
+                        <span>·</span>
+
+                        <a class="inline-block text-teal-600 underline transition hover:text-teal-600/75" href="#">
+                            Privacy Policy
+                        </a>
+                    </p>
+
+                    <p class="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
+                        © 2026 NaviBay
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
